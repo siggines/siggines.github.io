@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+<link href="css/galleria.css" rel="stylesheet" type="text/css" media="screen"> 
+
+<script type="text/javascript" src="jquery-1.2.6.min.js"></script> 
+<script type="text/javascript" src="jquery.galleria.js"></script> 
+<script type="text/javascript"> 
+jQuery(function($) { 
+
+$('ul.gallery').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(600);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1000);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+
+
+
+
+
+
+}); 
+</script>
+
+<style media="screen,projection" type="text/css">
+	
+	/* BEGIN DEMO STYLE */
+
+	.gallery li{width:80px;height:60px;border:3px double #111;margin: 0 2px;background:#000; float:left;}
+	.gallery {width:300px;}
+
+    </style>
+
+
+
+
+<title>simpleGallery by Bryant Smith</title>
+</head>
+
+<body>
+
+
+<div class="container_12" id="topContent">
+    <div class="grid_4">
+            <h1>.simple</h1>
+            <h2>The HDR Gallery</h2>
+    </div>
+    <div class="grid_8" id="rightTopContent">
+            <a href="#">home</a> |
+            <a href="#">gallery</a> |
+            <a href="#">contact</a>
+    </div>
+</div>
+
+
+    <div class="clear">&nbsp;</div>
+
+<div class="container_12">
+<div class="grid_4">    
+        <ul class="gallery"> 
+			<li class="active"><img src="./images/1.jpg" title="An HDR Field" alt="1"></li> 
+            <li><img src="./images/2.jpg" title="Nice Sky HDR" alt="2"></li> 
+            <li><img src="./images/3.jpg" title="Cool Colors" alt="3"></li> 
+            <li><img src="./images/4.jpg" title="A beautiful example of HDR on an Indoor scene" alt="4"></li> 
+            <li><img src="./images/5.jpg" title="Sweet lighthouse photo displaying nice contrast" alt="5"></li> 
+            <li><img src="./images/6.jpg" title="The Incredible HDR Bunny" alt="6"></li> 
+            <li><img src="./images/7.jpg" title="Basílica del Pilar, Zaragoza, Aragón" alt="7"></li> 
+            <li><img src="./images/8.jpg" title="Burg ehrenberg HDR photo" alt="8"></li> 
+            <li><img src="./images/9.jpg" title="Angers-Cathédrale" alt="9"></li> 
+            <li><img src="./images/10.jpg" title="Almost looks like a painting" alt="10"></li> 
+            <li><img src="./images/11.jpg" title="BMW Z8" alt="11"></li> 
+            <li><img src="./images/12.jpg" title="Awesome night HDR photo" alt="12"></li> 
+		</ul>
+        
+	</div>
+	<!-- end .grid_4 -->
+	<div class="grid_8">
+
+			<div id="main_image"></div>
+	</div>
+    </div>
+    <div class="clear">&nbsp;</div>
+    <div class="container_16">
+    <div class="grid_2">
+		<p>&nbsp;</p>
+	</div>
+    
+      <div class="grid_12" id="galleryInformation">
+		<h2>Your Gallery Title Goes Here</h2>
+        <p>
+			This is where you describe yourself, the photographs as a whole, or whatever you like.   You use the 'title' attributes of each of the images to set the captions.  Try to make all the images 600px.  All images will be resized to this width to be displayed (bigger and smaller), so it makes sense to use images of that width.
+		</p>
+        
+      <h2>Configuring Images</h2>
+       <p>
+       It is extremely easy to add images to this template.  The images are formatted using an unordered list (using <a href="http://devkick.com/lab/galleria/">Galleria</a>), so go into the source and find the ul / li tags with the images.   To create new ones, simple copy and paste one of the &lt;li&gt; lines, and select your new image, and set the caption using the 'title' attribute.</p>
+       
+       <p>If you're editing this template in Dreamweaver or some other WYSIWYG editor, don't let the 'Design' view scare you.  Since everything is formatted using Javascript, and Dreamweaver doesn't dynamically process this, it may look a little weird in the design view, but rest assured, it works just fine.</p>
+       
+       
+       <h2>License</h2>
+       <p>You can use this template in any way you want, all I ask is that you please leave a link back to me somewhere in the page.</p>
+       
+       <h2>Shout outs</h2>
+       <p>I used jQuery + the Galleria plugin, along with the <a href="http://960.gs/">960 Grid Framework.</a>   Most of the sample images come from the WikiMedia Commons HDR photo library - a few came from a royalty free photo pack.</p>
+       
+       
+       
+       <div id="footer"><a href="http://www.bryantsmith.com">web designer florida</a></div>
+	</div>
+    
+        <div class="grid_2">
+		<p>&nbsp;</p>
+	</div>
+    </div>
+    
+</div>
+
+</body>
+</html>
