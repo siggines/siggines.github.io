@@ -1,178 +1,296 @@
-/* A Free Design by Bryant Smith (bryantsmith.com) */
-/* Note: To change the icon, change the background image for '#titlebar h1' (make sure it's 16x16, PNG Alpha Transparent preferred) */
-
-html, body {
-text-align: center;
+:root {
+    --color0: #292D3E;
+    --color1: #F07178;
+    --color2: #C3E88D;
+    --color3: #FFCB6B;
+    --color4: #82AAFF;
+    --color5: #C792EA;
+    --color6: #89DDFF;
+    --color7: #959DCB;
+    --color8: #676E95;
+    --color9: #f78C6C;
+    --color10: #444267;
+    --color11: #32374D;
+    --color12: #8796B0;
+    --color13: #959DCB;
+    --color14: #FF5370;
+    --color15: #FFFFFF;
+    --textcol: #858596;
+	--bg: #1b1b23;
+	--altbg:#292934;
+	--link: #97bef9;
+	--linkalt: #5982c1;
 }
-p {text-align: left;}
+
+#links img{
+	height: 1.25em;
+}
+
+#links {
+	font-size: large;
+	float:center;
+	align: center;
+	margin: auto;
+	max-width: 300px;
+	text-align: center;
+	background-color: var(--altbg);
+	padding: 5px;
+	border-radius: 30px;
+}
+
+li img{
+	height: 1.25em;
+}
+h1 img{
+	height: 1em;
+}
+
+h2 img{
+	height: 1em;
+}
+
+h3 img{
+	height: 1em;
+}
+
+
+
+html {
+	padding-bottom: 100px;
+	color: var(--textcol);
+	font-family: sans-serif;
+	background: var(--bg);
+}
+
+a {
+	color: var(--link);
+	text-decoration: none;
+}
+
+a:hover {
+    color: var(--linkalt);
+}
 
 body {
-	margin: 0;
-	padding: 0;
-	background: #697281;
-	font-family:  Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #F1F5F8;
-  background: #26476E url(/images/background.png) repeat-x;
-}
-*
-{
-  margin: 0 auto 0 auto;
- text-align:left;}
-
-#page
-{
-  margin: 0 auto 0 auto; 
-  margin-top:25px;
-  display: block; 
-  height:auto;
-  position: relative; 
-  overflow: hidden; 
-  width: 900px;
+	max-width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	overflow: none;
 }
 
-#titlebar
-{
-background-image:url(titlebar.png);
-background-repeat:no-repeat;
-height:30px;
-width:614px;
-overflow:hidden;
+/* The two panels on the main page: */
+.mainpanel {
+	float: left;
+	max-width: 700px;
+	padding: 4px;
+	padding-right: 30px;
 }
 
-
-
-
-#titlebar h1
-{
-padding-left:21px;
-margin-top:8px;
-margin-left:5px;
-width:510px;
-position:relative;
-color:#FFFFFF;
-text-align:left;
-font-size:14px;
-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-background-image:url(icon.png); /*change the icon here */
-background-repeat:no-repeat;
-overflow:hidden;
+.mainpanel li {
+    line-height:20px;
 }
 
-
-
-
-#bar
-{
-background-image:url(menu.png);
-background-repeat:no-repeat;
-height:39px;
-width:610px;
-
-padding-left:4px;
-text-align:left;
-font-family:Tahoma, "Tahoma", "Trebuchet MS", Arial;
-font-size:11px;
+.sidepanel {
+	float: left;
+	max-width: 300px;
+	background-color: var(--altbg);
+	padding:2px;
+	border-radius: 0 10px 30px 0;
 }
 
-#bar ul {
+.sidepanel a {
+    color: #85631b;
+}
+
+.sidepanel a:hover {
+    color: #d89e23;
+}
+
+.sidepanel ul li {
+    font-size:20px;
+    margin:0 0 15px 0;
+}
+
+.sidepanel ul li ul li {
+    font-size:18px;
+    margin: 0px;
+    list-style: none;
+}
+
+a:hover img {
+    background: #fe8019;
+}
+
+/* Blog entry: */
+.entry {
+	padding: 10px;
+	border-radius: 0 10px 30px 0;
+	margin-bottom: 20px;
+	background: #2a2a35;
+	border-left: 10px solid #5982c1;
+}
+
+.entry h2 {
+    margin: 5px auto 2px auto;
+}
+
+footer strong {
+    font-weight: bold;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dt img {
+	height: 1em;
+}
+
+/* Class name of video thumbnails in videos.html */
+.image {
+	width: 175px !important;
+	table-layout: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-table;
 	padding: 0px;
-	list-style-type: none;
-	height:21px;
-	text-align:left;
 }
-#bar ul li , #bar ul li a, #bar ul li a:visited{
-	height:21px;
-	margin: 0px;
-	padding: 5px;
-	padding-left:2px;
-	padding-right:2px;
-	height: 21px;
+
+.image figcaption img {
+	height: 1em;
+}
+
+img.centered {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+img {
+    /* border: 1px solid var(--color10); */
+    /* background: var(--color10); */
+    /* border-radius: 4px; */
+}
+
+figcaption {
+	padding: 0px;
+	max-width: 175px;
+}
+
+code {
+	color: var(--color2);
+    overflow-x: auto;
+    /* background: #1d2021; */
+}
+
+pre {
+    background: var(--color11);
+    border: 1px solid var(--color10);
+    border-radius: 4px;
+    padding: 5px;
+    display: block;
+    align: center;
+    max-width: 900px;
+    /* background: #1d2021; */
+}
+
+.indexcolname {
+	max-width: 100px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	overflow: hidden;
-	display: inline;
-	text-align:center;
-	line-height:18px;
-	color:#000000;
-
-	text-decoration:none;
 }
 
-
-#bar ul li a:hover
-{
-color:#FFFFFF;
+.indexcoldesc {
+	font-weight: bold;
+	padding: 10px;
+	font-size: large;
 }
 
-#bar ul li:hover
-{
-height:21px;
-background:#316AC5;
+.indexcollastmod,.indexcolsize {
+	font-size: small;
 }
 
-#main
-{
-
-  width: 579px;
-  padding-top:0px;
-  padding-left:7px;
-  padding-right:28px;
-  font-family: "Lucida Console", Lucida Console, "Tahoma", "Trebuchet MS", Arial;
-  background-image:url(notepad_back.png);
-  background-repeat:repeat-y;
-  color:#000000;
+#indexlist {
+    margin: 0px auto;
 }
 
-
-#footer
-{
-padding-top:6px;
-background-image:url(footer.png);
-background-repeat:no-repeat;
-height:39px;
-width:614px;
-overflow:hidden;
-text-align:center;
-font-size:9px;
-color:#E2E2E0;
-}
-#footer a, #footer a:visited, #footer a:hover
-{
-font-size:9px;
-color:#E2E2E0;
+.centerpiece {
+	align: center;
+	margin: 0px auto;
 }
 
-
-#footer a:hover
-{
-color:#BCBCBC;
+/* Used in library.html */
+.booklist dt {
+	display: list-item;
+	list-style-type: square;
+	font-weight: normal;
 }
 
-
-
-html, body {
-text-align: center;
-}
-p {
-padding-top:0px;
-padding-bottom:15px;
-text-align: left;
-text-align:justify;
+.booklist dd {
+	display: none;
 }
 
-#main a
-{
-text-decoration:underline;
-color:#373737;
+.booklist:hover dd {
+	display: block;
 }
 
-#main a:hover
-{
-text-decoration:none;
-color:#999999;
+/* The mic class is for books featured in a NotRelated episode. */
+ .mic:before {
+    content: "🎙️";
 }
 
-#main h1
-{
-  font-family: "Lucida Console", Lucida Console, "Tahoma", "Trebuchet MS", Arial;
-  font-size:13px;
+.mic {
+	list-style: none;
+	padding-left: 1em;
+	text-indent: -1em;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+ h1 {
+    color: #50505f;
+    font-weight:normal;
+}
+
+ h2 {
+    color: #bb841a;
+    font-weight:normal;
+}
+
+.imgcont {
+	   text-align: center;
+	     position: relative;
+}
+
+.imgconttext {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: xx-large;
+	color: black;
+	text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.hiddiv {
+	display: none;
+}
+
+.qr:hover {
+	color: goldenrod;
+}
+
+.qr:hover .hiddiv {
+	display: block;
+	float: right;
+}
+
+.hiddiv img {
+	height: 200px;
 }
