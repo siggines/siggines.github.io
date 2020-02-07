@@ -1,19 +1,25 @@
 let processor = {
+	timerCallback function() {
+		if (this.video.paused || this.video.ended) {
+			return;
+		}
+		this.computeFrame();
+		left self = this;
+		setTimeout(function(){
+			self.timerCallback();
+		}, 0);
+	},
 	doLoad: function(){
 		this.video = document.querySelector("#video");
 		this.c1 = document.querySelector("#c1");
 		this.c1context = this.c1.getContext("2d");
-		this.video1 = document.querySelector("#video1");
 		this.c2 = document.querySelector("#c2");
 		this.c2context = this.c2.getContext("2d");
 		let self = this;
 		this.video.addEventListener("play", function(){
 			self.width = self.video.videoWidth;
 			self.height = self.video.videoHeight;
-		});
-		this.video1.addEventListener("play", function(){
-			self.width = self.video1.videoWidth;
-			self.height = self.video1.videoHeight;
+			self.timerCallback();
 		});
 	},
 	computeFrame: function(){
@@ -27,9 +33,10 @@ let processor = {
 			if (g>50)frame.data[i*4+3]=0;
 		}
 		this.c2context.putImageData(frame,0,0);
+		return;
 	}
 };
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("Loaded",()=>{
 	processor.doLoad();
 });
