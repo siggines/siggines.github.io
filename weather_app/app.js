@@ -24,7 +24,7 @@ window.addEventListener('load', ()=> {
             })
             .then(data =>{
                 console.log(data);
-                const {temperature, summary}= data.currently;
+                const {temperature, summary, icon}= data.currently;
                 
                 fah = temperature;
                 cel = (fah-32)/1.8;
@@ -33,9 +33,15 @@ window.addEventListener('load', ()=> {
                 temperatureDegree.textContent = que;
                 temperatureDescription.textContent = summary;
                 locationTimezone.textContent = data.timezone;
+                setIcons(icon, document.querySelector(".icon"));
             })
         });
-    }else{
-        h1.text = "Unable to retrieve location"
+    }
+
+    function setIcons(icon, iconID) {
+        const skycons = new Skycons({color:"white"});
+        const currentIcon = icon.replace(/-/g,"_").toUpperCase();
+        skycons.play();
+        return skycons.set(iconID, Skycons[currentIcon]);
     }
 });
