@@ -15,12 +15,19 @@ let processor = {
 		this.c1context = this.c1.getContext("2d");
 		this.c2 = document.querySelector("#c2");
 		this.c2context = this.c2.getContext("2d");
+		console.log(getContext);
+		console.log(querySelector);
+		console.log(document);
+		console.log(video);
+		console.log(c1);
+		console.log(c1context);
+		console.log(c2);
+		console.log(c2context);
 		let self = this;
 		this.video.addEventListener("play", function(){
 			self.width = self.video.videoWidth;
 			self.height = self.video.videoHeight;
 			self.timerCallback();
-			console.log(self);
 		});
 	},
 	computeFrame: function(){
