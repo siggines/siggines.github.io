@@ -1,10 +1,10 @@
 let processor = {
-	timerCallback function() {
+	timerCallback: function() {
 		if (this.video.paused || this.video.ended) {
 			return;
 		}
 		this.computeFrame();
-		left self = this;
+		let self = this;
 		setTimeout(function(){
 			self.timerCallback();
 		}, 0);
@@ -34,9 +34,10 @@ let processor = {
 		}
 		this.c2context.putImageData(frame,0,0);
 		return;
+		console.log(frame);
 	}
 };
 
-document.addEventListener("Loaded",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
 	processor.doLoad();
 });
