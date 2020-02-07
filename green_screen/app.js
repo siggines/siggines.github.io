@@ -39,6 +39,7 @@ let processor = {
 			let g=frame.data[i*4+1];
 			let b=frame.data[i*4+2];
 			if (g>50)frame.data[i*4+3]=0;
+			console.log(frame);
 		}
 		this.c2context.putImageData(frame,0,0);
 		return;
