@@ -49,4 +49,6 @@ let processor = {
 
 document.addEventListener("DOMContentLoaded",()=>{
 	processor.doLoad();
+	console.log(processor);
+	console.log(document);
 });
