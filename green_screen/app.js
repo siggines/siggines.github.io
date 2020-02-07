@@ -20,6 +20,7 @@ let processor = {
 			self.width = self.video.videoWidth;
 			self.height = self.video.videoHeight;
 			self.timerCallback();
+			console.log(self);
 		});
 	},
 	computeFrame: function(){
