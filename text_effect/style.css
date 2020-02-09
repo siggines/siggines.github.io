@@ -1,0 +1,33 @@
+*{
+	font-family: sans-serif;
+	color: white;
+}
+.main {
+	display: flex;
+	color: black;
+	height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-AJ9Cw3DdY48%2FUFCb1npjRHI%2FAAAAAAAAALs%2Fy1BaWpM2WfI%2Fs1600%2FNature-wallpaper%2B%25286%2529.jpg&f=1&nofb=1);
+	background-size: cover;
+}
+.typing {
+	position: relative;
+	top: 20%;
+	left: 20%;
+}
+.typing:after {
+	position: relative;
+	content: "";
+	width: 1px;
+	height: 10%;
+	border-right: 3px solid green;
+	right: -5px;  
+	animation: blink 0.7s infinite ease;
+}
+@keyframes blink{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
