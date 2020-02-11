@@ -3,7 +3,7 @@ const app = () => {
 	const play = document.querySelector(".play");
 	const circle = document.querySelector(".moving_outline circle");
 	const video = document.querySelector(".video_container video");
-	const sound = document.querySelectorAll(".sound_option sound");
+	const sound = document.querySelectorAll(".sound_option button");
 	const time_display = document.querySelector(".time_display");
 	const time_select = document.querySelectorAll(".time_option button")
 
@@ -11,6 +11,13 @@ const app = () => {
 	let clock = 600;
 	circle.style.strokeDasharray = outline_circle_length;
 	circle.style.strokeDashoffset = outline_circle_length;
+
+	sound.forEach(sound =>{sound.addEventListener("click", function(){
+		audio0.src = this.getAttribute("data-sound");
+		video.src = this.getAttribute("data-video");
+		check_play(audio0);
+	});
+});
 
 	play.addEventListener("click", ()=>{
 		check_play(audio0);
@@ -42,6 +49,12 @@ const app = () => {
 		console.log(progress);
 		circle.style.strokeDashoffset = progress;
 		time_display.textContent = `${minutes}:${seconds}`;
+		if (currentTime >= clock) {
+			audio0.pause();
+			audio0.currentTime = 0;
+			play.src = "./svg/play.svg";
+			video.pause();
+		}
 	}
 };
 
