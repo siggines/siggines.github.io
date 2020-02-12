@@ -79,7 +79,6 @@ body {
 	overflow: none;
 }
 
-/* The two panels on the main page: */
 .mainpanel {
 	float: left;
 	max-width: 700px;
@@ -122,7 +121,6 @@ a:hover img {
     background: #fe8019;
 }
 
-/* Blog entry: */
 .entry {
 	padding: 10px;
 	border-radius: 0 10px 30px 0;
@@ -147,7 +145,6 @@ dt img {
 	height: 1em;
 }
 
-/* Class name of video thumbnails in videos.html */
 .image {
 	width: 175px !important;
 	table-layout: fixed;
@@ -165,12 +162,6 @@ img.centered {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-}
-
-img {
-    /* border: 1px solid var(--color10); */
-    /* background: var(--color10); */
-    /* border-radius: 4px; */
 }
 
 figcaption {
@@ -219,34 +210,6 @@ pre {
 .centerpiece {
 	align: center;
 	margin: 0px auto;
-}
-
-/* Used in library.html */
-.booklist dt {
-	display: list-item;
-	list-style-type: square;
-	font-weight: normal;
-}
-
-.booklist dd {
-	display: none;
-}
-
-.booklist:hover dd {
-	display: block;
-}
-
-/* The mic class is for books featured in a NotRelated episode. */
- .mic:before {
-    content: "🎙️";
-}
-
-.mic {
-	list-style: none;
-	padding-left: 1em;
-	text-indent: -1em;
-	margin-left: 0;
-	padding-left: 0;
 }
 
  h1 {

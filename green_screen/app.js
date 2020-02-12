@@ -38,17 +38,18 @@ let processor = {
 			let r=frame.data[i*4+0];
 			let g=frame.data[i*4+1];
 			let b=frame.data[i*4+2];
-			if (g>50)frame.data[i*4+3]=0;
+			if (g>50 && r < 40)frame.data[i*4+3]=0;
 			console.log(frame);
 		}
 		this.c2context.putImageData(frame,0,0);
 		return;
-		console.log(frame);
 	}
 };
-
+(function(){
 document.addEventListener("DOMContentLoaded",()=>{
 	processor.doLoad();
 	console.log(processor);
 	console.log(document);
 });
+});
+
