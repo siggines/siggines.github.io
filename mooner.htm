@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+        *{background-color: gray}
+        #name{
+            color:white;
+            margin-left:450px;
+        }
+        .hi *{
+            width:30px;
+            height:30px;
+            position:absolute;
+            top:100px;
+
+            }
+        #indic0{
+            margin-left:420px;
+        }
+        #indic1{
+            margin-left:450px;
+        }#indic2{
+            margin-left:480px;
+        }#indic3{
+            margin-left:510px;
+        }#indic4{
+            margin-left:540px;
+        }#indic5{
+            margin-left:570px;
+        }#indic6{
+            margin-left:600px;
+        }#indic7{
+            margin-left:630px;
+        }#indic8{
+            margin-left:660px;
+        }#indic9{
+            margin-left:690px;
+        }#indic10{
+            margin-left:720px;
+        }#indic11{
+            margin-left:750px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+	<p id="demo"></p>
+	<h1 id="name"></h1>
+	<h2 id="name1"></h2>
+	<h2 id="name2"></h2>
+	<h3 id="name3"></h3>
+
+	<div class="hi">
+	<img id="indic0" src="b_circle.png"></img>
+	<img id="indic1" src="b_circle.png"></img>
+	<img id="indic2" src="b_circle.png"></img>
+
+	<img id="indic3" src="b_circle.png"></img>
+	<img id="indic4" src="b_circle.png"></img>
+	<img id="indic5" src="b_circle.png"></img>
+
+	<img id="indic6" src="b_circle.png"></img>
+	<img id="indic7" src="b_circle.png"></img>
+	<img id="indic8" src="b_circle.png"></img>
+
+	<img id="indic9" src="b_circle.png"></img>
+	<img id="indic10" src="b_circle.png"></img>
+	<img id="indic11" src="b_circle.png"></img>
+	</div>
+
+	<script>
+		var time = new Date();
+		document.getElementById("demo").innerHTML = time;
+		var month = time.getMonth();
+		var day = time.getDate();
+		console.log(month, day);
+
+		if (month==2) {
+		if (day<=24) {
+		document.getElementById("name").innerHTML = 'The Worm Moon';
+		document.getElementById("indic2").src = "w_circle.png";
+		}
+		else {
+		document.getElementById("name").innerHTML = 'The Egg Moon';
+		document.getElementById("indic3").src = "w_circle.png";
+		}
+		function when() {
+			return day<2 ? 'Waxing Crescent'
+			: day>=2 && day<9 ? 'Waxing Gibbous'
+			: day>=9 && day<16 ? 'Waning Gibbous'
+			: day>=16 && day<24 ? 'Waning Crescent'
+			: day>=24 ? 'Waxing Crescent'
+			: "Error";
+		}
+		function event_() {
+			return day==2 ? 'First quarter.'
+			: day==9 ? 'Full moon.'
+			: day==16 ? 'Third quarter.'
+			: day ==24 ? 'New Moon.'
+			: "";
+		}
+		function daysIntoYear(date){
+			return (Date.UTC(date.getFullYear(),date.getMonth(), date.getDate()) - Date.UTC(dateṝgetFullYear(), 0, 0)) / 24 / 60/ 60 / 1000;
+		}
+
+		document.getElementById("name3").innerHTML = daysIntoYear();
+
+		document.getElementById("name1").innerHTML = "Moon phase: " + when();
+		document.getElementById("name2").innerHTML = event_();
+		console.log(when(), event_());
+		}
+
+	</script>
+</body>
+
+</html><script type="text/javascript"></script>
