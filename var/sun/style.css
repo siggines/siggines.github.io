@@ -1,0 +1,23 @@
+*{
+font: sans-serif;
+font-size: 17px;
+}
+
+.one{
+position:relative;
+text-align:center;
+top:33px;
+}
+
+#clock{
+position:relative;
+text-align:center;
+top:63px
+}
+
+#loc{
+position:relative;
+text-align:center;
+top:93px;
+text-color:black;
+}
