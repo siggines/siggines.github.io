@@ -3,12 +3,18 @@
 
 <head>
 	<meta charset="UTF-8">
-	<!-- <link rel="stylesheet"href="./style.css"/> -->
-	<title></title>
+	<link rel="stylesheet"href="./style.css"/>
+	<script src="./clock.js"></script>
+	<script src="./geo.js"></script>
+	<title>Sun-times</title>
 </head>
 
-<body>
-	<div>
+<body onload="startTime();locate()">
+	<p><h1 class="one">smaple tette</h1></p>
+	<h1 id="clock"></h1>
+	<h2 id="loc"></h1>
+
+	<div class="input">
 
 	<form method="get" action="https://api.sunrise-sunset.org/json">
 	<input type="text" name="lat" size="15" value="">
