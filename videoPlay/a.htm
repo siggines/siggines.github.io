@@ -1,0 +1,54 @@
+<html>
+<head>
+<title></title>
+
+<style></style>
+
+</head>
+<body>
+
+<div class="div0" >
+	<button id="go" onclick="playPause()"> > </button>
+	<button onclick="subtractSize()"> Decrease </button>
+	<button onclick="normaliseSize()"> Reset </button>
+	<button onclick="addSize()"> Increase </button>
+	<!--<input id="input0" name="upload" type="file" tabindex="7">-->
+	<video id="video0" width="600" height="300" >
+		<source src="file.webm" type="video/webm">
+	</video>
+</div>
+
+<script>
+
+video = document.getElementById("video0");
+
+function playPause(){
+	go = document.getElementById("go").firstChild;
+	if(video.paused){
+		video.play();
+		go.data="||";
+	}
+	else{
+		video.pause();
+		go.data=">";
+	}
+}
+
+function addSize(){
+	video.width = 1200;
+	video.height = 600;
+}
+
+function normaliseSize(){
+	video.width = 600;
+	video.height = 300;
+}
+
+function subtractSize(){
+	video.width = 300;
+	video.height = 150;
+}
+
+</script>
+
+</body>
