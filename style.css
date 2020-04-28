@@ -68,7 +68,7 @@ h3 img{
 html {
 	background: linear-gradient(var(--color12), var(--color4), var(--color256));
 	/* background: var(--color0); */
-	padding-bottom: 300px;
+	padding-bottom: 500px;
 	font-family: sans-serif;
 }
 

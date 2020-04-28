@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Stella Vasquez-Colchester </title>
+
+<link rel='stylesheet' type='text/css' href='./styleHome.css'>
+<link rel='stylesheet' href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></script>
+
+</head>
+<body>
+
+<div class="slide-container" >
+
+	<i id="prev"></i>
+	<i id="prevArrow" class="fas fa-arrow-left" ></i>
+	<i id="next" ></i>
+	<i id="nextArrow" class="fas fa-arrow-right" ></i>
+
+	<div class="slide" >
+
+		<img id="lastClone" src="./pix/slide/4.png" >
+		<img src="./pix/slide/1.png" >
+		<img src="./pix/slide/2.png" >
+		<img src="./pix/slide/3.png" >
+		<img src="./pix/slide/4.png" >
+		<img id="firstClone" src="./pix/slide/1.png" >
+
+	</div>
+</div>
+
+<div class="header-container">
+	<div class="header">
+		<h1> Stella Vasquez-Colchester </h1>
+		<ul>
+			<div id="links">
+				<a target="_blank" href="https://www.instagram.com/stellitastupido_art/">
+					<img src="./pix/icons/insta.svg.png" >My Instagram
+				</a>
+				</br>
+				<a target="_blank" href="gallery.htm#gallery">
+					<img src="./pix/icons/gallery.png" >My Artwork
+				</a>
+			</div>
+		</ul>
+	</div>
+</div>
+
+<script>
+
+const slide = document.querySelector(".slide");
+const slideImages = document.querySelectorAll(".slide img");
+
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
+
+let counter = 1;
+const size = slideImages[0].clientWidth;
+
+slide.style.transform = 'translateX( ' +( -size*counter ) + 'px )';
+
+next.addEventListener('click',()=>{
+	if(counter>=slideImages.length-2) return;
+	slide.style.transition = "transform 0.4s ease-in-out";
+	++counter;
+	slide.style.transform = 'translateX( ' +( -size*counter ) + 'px )';
+});
+prev.addEventListener('click',()=>{
+	if(counter<=1) return;
+	slide.style.transition = "transform 0.4s ease-in-out";
+	--counter;
+	slide.style.transform = 'translateX( ' +( -size*counter ) + 'px )';
+});
+
+</script>
+
+</body>
+</html>

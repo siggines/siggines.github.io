@@ -1,0 +1,101 @@
+*{
+	margin:0;
+	padding:0;
+	background:#313131;
+	box-sizing:border-box;
+}
+
+#prev{
+	position:absolute;
+	top:0%;
+	left:1%;
+	z-index:3;
+	font-size:23px;
+	opacity:0;
+	width:250px;
+	height:90em;
+}
+#prevArrow{
+	position:absolute;
+	top:95%;
+	left:5%;
+	z-index:2;
+	font-size:23px;
+	color:grey;
+	opacity:0.5;
+	background:black;
+}
+#nextArrow{
+	position:absolute;
+	top:95%;
+	right:5%;
+	z-index:2;
+	font-size:23px;
+	color:grey;
+	opacity:0.5;
+	background:black;
+	font-size:23px;
+}
+#next{
+	position:absolute;
+	top:0%;
+	right:1%;
+	z-index:3;
+	font-size:23px;
+	color:blue;
+	opacity:0;
+	width:250px;
+	height:90em;
+}
+
+.slide-container{
+	position:relative;
+	width:700px;
+	margin:auto;
+	border:3px solid black;
+	overflow:hidden;
+}
+
+.slide{
+	display:flex;
+	height:500px;
+}
+
+.slide img{
+	width:100%;
+}
+#links{
+	font-size:20px;
+	font-style:oblique;
+	font-weight:bold;
+	font-color:white;
+	float:center;
+	align:center;
+	margin:auto;
+	text-align:center;
+	padding:10px;
+	background-color:grey;
+	border-radius:20px;
+	max-width:300px;
+
+}
+#links a{
+	text-decoration:none;
+	background-color:grey;
+}
+#links img{
+	height:1.25em;
+	background-color:grey;
+}
+a:hover {
+	color: green;
+}
+a:hover img {
+    	background: grey;
+}
+.header h1{
+	float:center;
+	align:center;
+	text-align:center;
+	font-family:serif;
+}
