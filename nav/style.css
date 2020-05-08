@@ -9,7 +9,7 @@ body{
 
 header{
 	box-shadow:0px 3px 10px rgba(0,0,0,0.3);
-	position:sticky; /* So the navbar stays at top when user scrolls down */
+	position:sticky;
 	top:0;
 	background:white;
 }
@@ -32,7 +32,9 @@ nav ul{
 	display:flex;
 	justify-content:space-between;
 }
-nav a{
+nav a,
+#dropButton
+{
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -44,7 +46,9 @@ nav a{
 	width:90px;
 	background:white;
 }
-nav a:hover{
+nav a:hover,
+nav #dropButton:hover,
+nav #dropContent:hover{
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -56,20 +60,40 @@ nav a:hover{
 	width:90px;
 	background:darkgrey;
 }
-nav a:hover{
-	/* text-decoration:underline; */
+nav #dropMain{
+	position:absolute;
+	left:7%;
+}
+nav #dropButton{
+	font:inherit;
+	font-size:1.9rem;
+	border:none;
+}
+nav #dropMain .dropContent{
+	display:none;
+}
+nav #dropMain:hover .dropContent{
+	display: block;
+}
+nav #dropMain .dropContent a{
+	font-size:1.3rem;
+	display:flex;
+	justify-content:center;
+	height:70px;
+	width:150px;
+	left:-20%;
 }
 nav #Home{
 	position:absolute;
-	left:400px;
+	left:27%;
 }
 nav #Gallery{
 	position:absolute;
-	left:650px;
+	left:47%;
 }
 nav #Other{
 	position:absolute;
-	left:900px;
+	left:67%;
 }
 
 section{
