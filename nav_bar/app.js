@@ -1,19 +1,33 @@
+/* Navbar */
 const Home = document.getElementById("Home");
 const Gallery = document.getElementById("Gallery");
 const Other = document.getElementById("Other");
 
+/* Actual page sections */
+const H = document.querySelector(".Home");
+const G = document.querySelector(".Gallery");
+const O = document.querySelector(".Other");
+
 /*
 TO-DO:
-	Replace scrollTo with 'smooth-scroll'
 	Add drop down menu
 */
 
+var rectH = H.getBoundingClientRect();
+var yH = rectH.top;
+
+var rectG = G.getBoundingClientRect();
+var yG = rectG.top;
+
+var rectO = O.getBoundingClientRect();
+var yO = rectO.top;
+
 Home.onclick = function(){
-	window.scrollTo( 0, 0 );
+	window.scrollTo( 0, yH );
 };
 Gallery.onclick = function(){
-	window.scrollTo( 0, 660 );
+	window.scrollTo( 0, yG );
 };
 Other.onclick = function(){
-	window.scrollTo( 0, 1340 );
+	window.scrollTo( 0, yO );
 };
