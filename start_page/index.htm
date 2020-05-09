@@ -1,60 +1,67 @@
+<!DOCTYPE html>
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" href="pix/home.png">
+		<script src="Source/clock.js"></script>
+		<title>Startpage</title>
+	</head>
+	<body onload="startTime()">
 
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="pix/home.png">
-	<script src="Source/clock.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<title>Startpage</title>
-</head>
+		<div id=wrap align="center">
 
-<body onload="startTime()">
-	<!--	Hello, today is <?php echo date('l, F jS, Y'); ?>.	-->
-<div id=wrap align="center">
-	<h1 id="clock"></h1>
-	<form method="get" action="https://www.qwant.com/?q=">
-	<input type="text" name="q" size="15" value=""></form>
+			<h1 id="clock"></h1>
 
-	<div class="child">
-		<h3>Youtube</h3>
-		<a href="http://youtube.com/user/PowerfulJRE/videos">jre</a><br>
-		<a href="https://www.youtube.com/user/AnimusGameHD/videos">Blume</a><br>
-		<a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q/playlists">DevEd</a><br>
-		<form method="get" action="https://www.youtube.com/results?search_query=">
-		<input type="text" name="q" size="10" value=""></form>
-	</div>
+			<form method="get" action="https://www.qwant.com/?q=">
+				<input type="text" name="q" size="15" value="">
+			</form>
 
-	<div class="child">
-		<h3>Education</h3>
-		<a href="https://www.w3schools.com/">W3_Schools</a><br>
-		<a href="https://www.bitdegree.org/learn/javascript-call-function">Bitdegree</a><br>
-		<a href="https://reactjs.org/tutorial/tutorial.html"> React Tutor </a><br>
-		<a href="https://reactjs.org/docs/introducing-jsx.html"> React Documentation </a><br>
-		<a href="https://reactjs.org/community/courses.html"> React Courses </a><br>
-	</div>
+			<form id="chan" action="javascript:attach()" >
+				<input id="board" type="text" size="5" onkeydown="enter(this)" >
+			</form>
 
-    	<div class="child">
-		<h3>Msg</h3>
-		<a href="https://mail.tutanota.com/login">Tuta</a><br>
-		<a href="http://mail.protonmail.com/login">Proton</a><br>
-		<a href="https://www.messenger.com/t/100004646764798">Messenger</a><br>
-	</div>
+			<div class="child">
+				<h3>Youtube</h3>
+				<a href="http://youtube.com/user/PowerfulJRE/videos">jre</a><br>
+				<a href="https://www.youtube.com/user/AnimusGameHD/videos">Blume</a><br>
+				<a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q/playlists">DevEd</a><br>
+				<form method="get" action="https://www.youtube.com/results?search_query=">
+					<input type="text" name="q" size="10" value="">
+				</form>
+			</div>
 
-	<div class="child">
-		<h3>Useful1</h3>
-		<a href="https://github.com/siggines?tab=repositories&q=&type=public&language=">GitHub</a><br>
-		<a href="https://siggines.github.io/">Git-page</a><br>
-        	<a href="https://wiki.archlinux.org/">Arch_wiki</a> <br>
-	</div>
+			<div class="child">
+				<h3>Education</h3>
+				<a href="https://www.w3schools.com/">W3_Schools</a><br>
+				<a href="https://www.bitdegree.org/learn/javascript-call-function">Bitdegree</a><br>
+				<a href="https://reactjs.org/tutorial/tutorial.html"> React Tutor </a><br>
+				<a href="https://reactjs.org/docs/introducing-jsx.html"> React Documentation </a><br>
+				<a href="https://reactjs.org/community/courses.html"> React Courses </a><br>
+			</div>
 
-	<div class="child">
-		<h3>Useful2</h3>
-		<a href="https://www.windy.com/?53.127,2.106,5">Windy_ty</a><br>
-		<a href="http://wikipedia.org/wiki/Main_Page">Wikipedia</a><br>
-		<a href="https://translate.google.com/#view=home&op=translate&sl=la&tl=en">Translate</a><br>
-	</div>
+			<div class="child">
+				<h3>Msg</h3>
+				<a href="https://mail.tutanota.com/login">Tuta</a><br>
+				<a href="http://mail.protonmail.com/login">Proton</a><br>
+				<a href="https://www.messenger.com/t/100004646764798">Messenger</a><br>
+			</div>
 
-</div>
-</body>
+			<div class="child">
+				<h3>Useful1</h3>
+				<a href="https://github.com/siggines?tab=repositories&q=&type=public&language=">GitHub</a><br>
+				<a href="https://siggines.github.io/">Git-page</a><br>
+				<a href="https://wiki.archlinux.org/">Arch_wiki</a> <br>
+			</div>
+
+			<div class="child">
+				<h3>Useful2</h3>
+				<a href="https://www.windy.com/?53.127,2.106,5">Windy_ty</a><br>
+				<a href="http://wikipedia.org/wiki/Main_Page">Wikipedia</a><br>
+				<a href="https://translate.google.com/#view=home&op=translate&sl=la&tl=en">Translate</a><br>
+			</div>
+
+		</div>
+
+		<script src="Source/app.js"></script>
+	</body>
 </html>
