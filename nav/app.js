@@ -8,11 +8,6 @@ const H = document.querySelector(".Home");
 const G = document.querySelector(".Gallery");
 const O = document.querySelector(".Other");
 
-/*
-TO-DO:
-	Add drop down menu
-*/
-
 var rectH = H.getBoundingClientRect();
 var yH = rectH.top;
 
