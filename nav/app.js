@@ -26,3 +26,7 @@ Gallery.onclick = function(){
 Other.onclick = function(){
 	window.scrollTo( 0, yO );
 };
+
+function back(){
+	window.history.back()
+}
