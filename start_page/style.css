@@ -44,3 +44,26 @@ a:active{
 	top:300px;
 	left:300px;
 }
+
+.child a{
+	opacity:0;
+}
+.child h3{
+	position:relative;
+	top:50px;
+}
+
+.child:hover a{
+	opacity:1;
+}
+.child:hover h3{
+	opacity:0;
+	z-index:-1;
+}
+
+#youtube{
+	opacity:0;
+}
+.child:hover #youtube{
+	opacity:1;
+}
