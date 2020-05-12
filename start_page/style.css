@@ -47,18 +47,13 @@ a:active{
 
 .child a{
 	opacity:0;
+	/*animation:fade 3s linear;*/
+	transition: opacity 2s ease-in;
 }
-.child h3{
-	position:relative;
-	top:50px;
-}
-
 .child:hover a{
 	opacity:1;
-}
-.child:hover h3{
-	opacity:0;
-	z-index:-1;
+	transition: opacity 2s ease-out;
+	transition: opacity .01s ease-in;
 }
 
 #youtube{
@@ -67,3 +62,25 @@ a:active{
 .child:hover #youtube{
 	opacity:1;
 }
+
+.child h3{
+	opacity:1;
+	position:relative;
+	top:50px;
+}
+.child:hover h3{
+	opacity:0;
+	z-index:-1;
+}
+@keyframes fade{
+	0%{
+		opacity:0;
+	}
+	99%{
+		opacity:0;
+	}
+	100%{
+		Opacity:1;
+	}
+}
+
