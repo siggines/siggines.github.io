@@ -2,8 +2,9 @@
 <html lang="en">
 
 	<head>
-		<title>Jacob Siggins's Homepage</title>
+		<title>Jacob Siggins Homepage</title>
 		<link rel='stylesheet' type='text/css' href='style.css'>
+		<link rel="icon" href="pix/home.png">
 		<meta charset="utf-8"/>
 	</head>
 
@@ -28,18 +29,25 @@
 				<h2 style="margin:0px">Welcome!</h2>
 				<p>My name is Jacob Siggins. I am learning to programme in JavaScript, as well as C++ and Java. </p>
 				<h2 style="margin:0px">Contact</h2>
-				<p>Feel free to email me at either one of these addresses:</p>
+				<p>You can reach me by email at either of these addresses: (click to copy) </p>
 				<ul>
-					<li><h3><small>siggins@protonmail.com</small></h3></li>
-					<li><h3><small>jacobrsiggins@gmail.com</small></h3></li>
+					<li>
+						<button class="mail" id="mail1" type="button" onclick="COPY(1)" href="" >siggins@protonmail.com</button>
+						<a class="copied" id="copied1" > Copied to clipboard </a>
+					</li>
+					<li>
+						<button class="mail" id="mail2" type="button" onclick="COPY(2)" href="" >jacobrsiggins@gmail.com</button>
+						<a class="copied" id="copied2" > Copied to clipboard </a>
+					</li>
 				</ul>
 				</br>
 				<h2 style="margin:0px">Files</h2>
 				</br>
 				<ul>
-					<a  class="resume" href="resume.pdf">resume.pdf</a>
+					<a class="resume" href="doc/resume.pdf">resume.pdf</a>
 				</ul>
 
+				<script src="./app.js" ></script>
 	</body>
 
 </html>

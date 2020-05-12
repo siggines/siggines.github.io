@@ -1,5 +1,5 @@
 :root {
-	--color1: #cc241d; /* Maroon red ( for h3 ) */
+	--color1: #cc241d; /* Maroon red ( for h3 et cetera ) */
 	--color2: #98971a; /* Greyish green ( for border ) */
 	--color3: #d79921; /* Orange-yellow ( for h2 ) */
 	--color4: #003300; /* Dark Green (hovered link ) */
@@ -48,8 +48,13 @@ h2 img{
 	height: 1em;
 }
 
-h3 {
+.mail{
 	color: var(--color1);
+	background: var(--color6);
+	border:none;
+}
+.mail:hover{
+	color: #8b0000; /* Dark red */
 }
 
 h3 img{
@@ -112,4 +117,30 @@ h2 {
 	position: relative;
 	left: 60vh;
 	top: 7vh;
+}
+
+.copied{
+	position:relative;
+	z-index:-1;
+	opacity:0;
+}
+#copied1{
+	left:31px;
+}
+#copied2{
+	left:26px;
+}
+
+.fader{
+	animation:fade 3s linear;
+	z-index:1;
+	font-size:18px;
+	color: var(--color5);
+}
+
+@keyframes fade{
+	0%{ opacity:1; }
+	50%{ opacity:1; }
+	80%{ opacity:0.3; }
+	100%{ opacity:0; z-index:-1; }
 }
