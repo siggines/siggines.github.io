@@ -1,4 +1,4 @@
-var getIP = 'http://ip-api.com/json/';
+var getIP = 'https://siggines.github.io/weather_app/api.htm';
 var openWeatherMap = 'https://api.openweathermap.org/data/2.5/weather'
 
 var LOC = document.getElementById("loc");
