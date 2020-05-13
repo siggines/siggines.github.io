@@ -17,17 +17,17 @@ const app = () => {
 		video.src = this.getAttribute("data-video");
 		check_play(audio0);
 	});
-});
+	});
 
 	play.addEventListener("click", ()=>{
 		check_play(audio0);
 	});
-	time_select.forEach(option => { 
-		option.addEventListener("click", function(){ 
-			clock = this.getAttribute("data-time"); 
+	time_select.forEach(option => {
+		option.addEventListener("click", function(){
+			clock = this.getAttribute("data-time");
 			time_display.textContent = `${Math.floor(elapsed_time / 60)}:${Math.floor(elapsed_time % 60)}`;
-		}); 
-	});	
+		});
+	});
 	const check_play = audio0 => {
 		if (audio0.paused) {
 			audio0.play();

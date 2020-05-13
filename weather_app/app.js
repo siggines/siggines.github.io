@@ -1,47 +1,28 @@
-window.addEventListener('load', ()=> {
-    let long;
-    let lat;
-    let temperatureDescription = document.querySelector(".temperature-description");
-    let temperatureDegree = document.querySelector(".temperature-degree");
-    let locationTimezone = document.querySelector(".location-timezone");
-    let fah;
-    let cel;
-    let temp;
-    let que;
+var getIP = 'http://ip-api.com/json/';
+var openWeatherMap = 'http://api.openweathermap.org/data/2.5/weather'
 
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(position => {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
+var LOC = document.getElementById("loc");
+var clouds = document.getElementById("clouds");
+var temp = document.getElementById("temp");
+var wind = document.getElementById("wind");
+var desc = document.getElementById("desc");
+//var DIS = document.getElementById("loc");
 
-            const proxy = "https://cors-anywhere.herokuapp.com/"
-            const api = `${proxy}https://api.darksky.net/forecast/e4be2535a1a7f99bdcdac04a9466214d/${lat},${long}`;
-            const api_windy = `${proxy}https://api.windy.com/point-forecast/h1BNNFesa7krzTbEeD2d56izmmfS5Y6E/${lat},${long}`;
-            
-            fetch(api)
-            .then(response =>{
-                return response.json();
-            })
-            .then(data =>{
-                console.log(data);
-                const {temperature, summary, icon}= data.currently;
-                
-                fah = temperature;
-                cel = (fah-32)/1.8;
-                temp = Math.round(cel);
-                que = temp.toString() + ' celcius';
-                temperatureDegree.textContent = que;
-                temperatureDescription.textContent = summary;
-                locationTimezone.textContent = data.timezone;
-                setIcons(icon, document.querySelector(".icon"));
-            })
-        });
-    }
+$.getJSON(getIP).done(function(location) {
+	$.getJSON(openWeatherMap, {
+		lat: location.lat,
+		lon: location.lon,
+		units: 'metric',
+		APPID: '2165aab16a1fba518e53a0da29ba38d5'
+	}).done(function(weather) {
+		console.log(weather);
 
-    function setIcons(icon, iconID) {
-        const skycons = new Skycons({color:"white"});
-        const currentIcon = icon.replace(/-/g,"_").toUpperCase();
-        skycons.play();
-        return skycons.set(iconID, Skycons[currentIcon]);
-    }
-});
+		LOC.textContent = weather.name;
+
+		clouds.textContent = weather.clouds.all+"%";
+		temp.textContent = weather.main.temp;
+		wind.textContent = weather.wind.speed+" Km/h";
+		desc.textContent = weather.main.humidity+" %";
+
+	})
+})

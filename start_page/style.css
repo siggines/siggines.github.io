@@ -3,6 +3,7 @@
 }
 body{
 	background-image: url("pix/bg.jpg");
+	background-size:100%;
 }
 .child{
 	width: 200px;
