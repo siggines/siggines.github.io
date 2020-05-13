@@ -21,7 +21,6 @@ var div = document.querySelectorAll("div");
 
 var TEST = document.getElementsByClassName("TEST");
 
-var i; // Should replace manual index arguments with something to fetch whatever the index number is.
 
 function reset_animation(i) {
 	TEST[i].style.animation = "none";

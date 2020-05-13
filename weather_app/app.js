@@ -7,7 +7,7 @@ var temp = document.getElementById("temp");
 var wind = document.getElementById("wind");
 var desc = document.getElementById("desc");
 
-$.getJSON(getIP).done(function(location) {
+$.getJSON(getIP).done(function(location){
 	$.getJSON(openWeatherMap, {
 		lat: location.lat,
 		lon: location.lon,
