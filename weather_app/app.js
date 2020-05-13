@@ -1,4 +1,4 @@
-var getIP = 'https://siggines.github.io/weather_app/api.htm';
+var getIP = 'https://siggines.github.io/weather_app/proxy/api.htm';
 var openWeatherMap = 'https://api.openweathermap.org/data/2.5/weather'
 
 var LOC = document.getElementById("loc");
@@ -17,7 +17,6 @@ $.getJSON(getIP).done(function(location){
 		console.log(weather);
 
 		LOC.textContent = weather.name;
-
 		clouds.textContent = weather.clouds.all+"%";
 		temp.textContent = weather.main.temp;
 		wind.textContent = weather.wind.speed+" Km/h";
