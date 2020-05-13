@@ -1,12 +1,11 @@
 var getIP = 'http://ip-api.com/json/';
-var openWeatherMap = 'http://api.openweathermap.org/data/2.5/weather'
+var openWeatherMap = 'https://api.openweathermap.org/data/2.5/weather'
 
 var LOC = document.getElementById("loc");
 var clouds = document.getElementById("clouds");
 var temp = document.getElementById("temp");
 var wind = document.getElementById("wind");
 var desc = document.getElementById("desc");
-//var DIS = document.getElementById("loc");
 
 $.getJSON(getIP).done(function(location) {
 	$.getJSON(openWeatherMap, {
