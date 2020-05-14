@@ -21,7 +21,7 @@ function attach(){
 ///////////////////////////////////////////////////////////////////////////////////////
 
 var div = document.querySelectorAll("div");
-var title = document.getElementsByClassName("TEST");
+var title = document.getElementsByClassName("title");
 
 function reset_animation(i) {
 	title[i].style.animation = "none";

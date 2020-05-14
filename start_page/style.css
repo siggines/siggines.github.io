@@ -6,13 +6,14 @@ body{
 	background-size:100%;
 }
 .child{
-	width: 200px;
-	height: 200px;
+	width: 169px;
+	height: 169px;
 	margin: 10px;
 	display: inline-block;
-	background: #e0e0e0;
-	opacity:0.8;
-	/*border: 3px solid #000000;*/
+	/*background: #e0e0e0;*/
+	background: #999999;
+	background-color:rgba(153,153,153, 0.5);
+	border: 1px solid #000000;
 	vertical-align: bottom;
 }
 #wrap{
@@ -31,10 +32,10 @@ body{
 }
 
 #search{
-	opacity:0.8;
+	opacity:0.7;
 }
 #chan{
-	opacity:0.8;
+	opacity:0.7;
 }
 
 a{
@@ -50,7 +51,7 @@ a:visited{
 }
 a:hover{
 	text-decoration: none;
-	color: gray;
+	text-shadow: 1px 1px 1px black;
 }
 a:active{
 	text-decoration: none;
@@ -66,6 +67,7 @@ a:active{
 	opacity:0;
 	/*animation:fade 3s linear;*/
 	transition: opacity 2s ease-in;
+	font-size:19px;
 }
 .child:hover a{
 	opacity:1;
