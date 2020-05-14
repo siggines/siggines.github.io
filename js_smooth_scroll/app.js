@@ -23,10 +23,10 @@ function smoothscroll(target, duration){
 	requestAnimationFrame(animation);
 }
 const app = () => {
-var section1 = document.querySelector(".section1");
-section1.addEventListener('click', function() {
-	smoothscroll(".section1", 2001);
-});
+	var section1 = document.querySelector(".section1");
+	section1.addEventListener('click', function() {
+		smoothscroll(".section1", 2001);
+	});
 
 };
 
