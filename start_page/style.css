@@ -11,9 +11,7 @@ body{
 	margin: 10px;
 	display: inline-block;
 	/*background: #e0e0e0;*/
-	background: #999999;
-	background-color:rgba(153,153,153, 0.5);
-	border: 1px solid #000000;
+	background-color:rgba(255,255,255, 0.3);
 	vertical-align: bottom;
 }
 #wrap{

@@ -1,0 +1,109 @@
+*{
+	font-family:serif;
+	font-size:14px;
+	background:lightgrey;
+}
+#title{
+	font-size:30px;
+	text-align:center;
+	margin:auto;
+	width:900px;
+	padding:15px;
+}
+h2{
+	font-size:20px;
+}
+
+.cover{
+	position:absolute;
+	width:99%;
+	height:97%;
+	color:black;
+	z-index:-1;
+	opacity:0.75;
+}
+
+#home{
+	border:none;
+	background:grey;
+	position:absolute;
+	left:25%;
+	top:1%;
+	width:1000px;
+	height:50px;
+	font-size:inherit;
+	opacity:0;
+	cursor:pointer;
+}
+
+#families{
+}
+#species{
+}
+#families,
+#species{ /* <select> Id's */
+	border:none;
+	font-size:25px;
+	outline:none;
+	min-width:200px;
+}
+#families option,
+#species option{
+	font-size:20px;
+	outline:none;
+}
+
+#selections{ /* <select> wrapper */
+	margin:auto;
+	width:50%;
+	padding:10px;
+	text-align:center;
+}
+
+.select{ /* <select> class */
+	background:grey;
+	outline:none;
+}
+
+#text_box{
+	margin:auto;
+	width:50%;
+	padding:6px;
+	text-align:left;
+	border: 2px solid black;
+	background:white;
+	min-height:70vh;
+}
+
+#text{
+	font-size:17px;
+	background:white;
+}
+
+.image{
+	float:right;
+}
+.image:hover{
+	cursor:pointer;
+}
+.image.open{
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:40%;
+	z-index:12;
+}
+.cover.on{
+	z-index:11;
+}
+
+.cover.on #exit{
+	width:100%;
+	height:100%;
+	border:none;
+}
+#exit:focus{
+	outline:none;
+	box-shadow:none;
+}

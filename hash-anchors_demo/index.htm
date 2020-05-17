@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>  </title>
+
+		<link rel="stylesheet" href="./style.css" />
+
+	</head>
+	<body onload="read()" >
+		<div class="cover">
+			<button id="exit" onclick="exit()" >
+			</button>
+		</div>
+		<h3 id="title" > ~ European Birds ~ </h3>
+
+		<button id="home" onclick="location.hash='';location.reload(true);" >  </button>
+
+		<div id="selections">
+			<!-- <select class="select" id="families" name="Familes">
+				<option value=""> Families </option>
+			</select> -->
+			<select class="select" id="species" name="Species" onchange="if(this.value){window.location.href=this.value;location.reload(true);}" >
+				<option value="" > Families/Species </option>
+				<option value="#robin" > Robin </option>
+				<option value="#owl" > Owl </option>
+			</select>
+		</div>
+
+		<div id="text_box" >
+
+			<h2></h2>
+			<p id="text" > This is where text content goes </p>
+			<img class="image" onerror="this.style.display='none'" ></img>
+			<img class="image" onerror="this.style.display='none'" ></img>
+			<img class="image" onerror="this.style.display='none'" ></img>
+			<img class="image" onerror="this.style.display='none'" ></img>
+			<img class="image" onerror="this.style.display='none'" ></img>
+
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>
