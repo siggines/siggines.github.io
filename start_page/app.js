@@ -1,18 +1,3 @@
-var chan = document.getElementById("chan");
-var board = "";
-
-function enter(input){
-	if(event.key === 'Enter'){
-		board = input.value;
-	}
-}
-
-function attach(){
-	var together = "https://boards.4channel.org/"+board+"/catalog";
-	window.location = together;
-	board.value="";
-}
-
 ///////////////////////////////////////////////////////////////////////////////////////
 // Box title fadeback on mouse leave animations, canceled when mosue moves back in
 // "mouseout" would be applicable if I wanted the (div) element's 'children' included
