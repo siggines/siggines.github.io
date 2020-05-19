@@ -7,8 +7,9 @@
 	font-size:30px;
 	text-align:center;
 	margin:auto;
-	width:900px;
+	max-width:600px;
 	padding:15px;
+	z-index:-1;
 }
 h2{
 	font-size:20px;
@@ -27,57 +28,36 @@ h2{
 	border:none;
 	background:grey;
 	position:absolute;
-	left:25%;
-	top:1%;
-	width:1000px;
+	left:30%;
+	top:5%;
+	width:600px;
 	height:50px;
 	font-size:inherit;
 	opacity:0;
 	cursor:pointer;
 }
 
-#families{
-}
-#species{
-}
-#families,
-#species{ /* <select> Id's */
-	border:none;
-	font-size:25px;
-	outline:none;
-	min-width:200px;
-}
-#families option,
-#species option{
-	font-size:20px;
-	outline:none;
-}
-
-#selections{ /* <select> wrapper */
-	margin:auto;
-	width:50%;
-	padding:10px;
-	text-align:center;
-}
-
-.select{ /* <select> class */
-	background:grey;
-	outline:none;
-}
-
 #text_box{
 	margin:auto;
 	width:50%;
-	padding:6px;
+	padding:1px;
 	text-align:left;
 	border: 2px solid black;
 	background:white;
-	min-height:70vh;
+	min-height:80vh;
+	transform:translate(0,10px);
 }
 
 #text{
-	font-size:17px;
+	font-size:20px;
 	background:white;
+}
+
+#species{
+	margin:0;
+	position:relative;
+	top:0;
+	left:0;
 }
 
 .image{
@@ -106,4 +86,32 @@ h2{
 #exit:focus{
 	outline:none;
 	box-shadow:none;
+}
+
+/* Selction Menu */
+
+.list{
+	display:block;
+	margin:0 auto;
+	padding:2px;
+	font-size:17px;
+	outline:none;
+}
+.list option{
+	font-size:17px;
+}
+#s_title{
+	display:none;
+}
+
+.selections{ /* wrapper */
+	position:relative;
+	font-family:serif;
+}
+
+.select-selected{
+	background:grey;
+}
+
+.list.custom{
 }

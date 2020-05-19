@@ -11,25 +11,44 @@
 			<button id="exit" onclick="exit()" >
 			</button>
 		</div>
-		<h3 id="title" > ~ European Birds ~ </h3>
+		<h3 id="title" > ~ Garden & Field Birds ~ </h3>
 
 		<button id="home" onclick="location.hash='';location.reload(true);" >  </button>
 
-		<div id="selections">
-			<!-- <select class="select" id="families" name="Familes">
-				<option value=""> Families </option>
-			</select> -->
-			<select class="select" id="species" name="Species" onchange="if(this.value){window.location.href=this.value;location.reload(true);}" >
-				<option value="" > Families/Species </option>
-				<option value="#robin" > Robin </option>
-				<option value="#owl" > Owl </option>
+		<div class="selections" onclick="custom()" >
+			<select class="list" name="Families" onchange="if(this.value){window.location.href=this.value;location.reload(true);}" >
+				<option id="s_title" value="" > By Family </option>
+				<option value="#Robin" > Flycatchers </option>
+				<option value="#Owl" > Owls </option>
+				<option value="#Falcon" > Falcons </option>
+				<option value="#Hawk" > Hawks </option>
+				<option value="#Crow" > Crow </option>
+				<option value="#Swallow" > Swallow </option>
+			<!--	<option value="#Thruse" > Thrushe </option>
+				<option value="#Warbler" > Warbler </option>
+				<option value="#Sparrow" > Sparrow </option>
+				<option value="#Finche" > Finche </option>
+				<option value="#Chat" > Chat </option>
+				<option value="#Accentor" > Accentor </option>
+				<option value="#Tit" > Tit </option>
+				<option value="#Dipper" > Dipper </option>
+				<option value="#Nightjar" > Nightjar </option>
+				<option value="#Osprey" > Osprey </option>
+				<option value="#Wren" > Wren </option>
+				<option value="#Swift" > Swift </option>
+				<option value="#Lark" > Lark </option>
+				<option value="#Starling" > Starling </option>
+				<option value="#Bunting" > Bunting </option>
+				<option value="#Bearded_Tit" > Bearded Tit </option>
+				<option value="#Tree_Creeper" > Tree Creeper </option>
+				<option value="#Pipit" > Pipit </option>	-->
 			</select>
 		</div>
 
 		<div id="text_box" >
 
-			<h2></h2>
-			<p id="text" > This is where text content goes </p>
+			<h2 id="species" > This is where species list is put </h2>
+			<p id="text" > This site uses javaScript to load relevant page content via hash references instead of multiple html files. </p>
 			<img class="image" onerror="this.style.display='none'" ></img>
 			<img class="image" onerror="this.style.display='none'" ></img>
 			<img class="image" onerror="this.style.display='none'" ></img>
