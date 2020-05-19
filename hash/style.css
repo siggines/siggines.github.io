@@ -61,7 +61,7 @@ h2{
 }
 
 .image{
-	float:right;
+	position:relative;
 }
 .image:hover{
 	cursor:pointer;
