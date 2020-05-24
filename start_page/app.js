@@ -14,10 +14,11 @@ function reset_animation(i) {
 }
 
 function fade_back(i){
-	title[i].style.animation = "fade 2.3s linear";
+	title[i].style.display = "block";
+	title[i].style.animation = "fade 3s linear";
 	setTimeout(function() {
-		reset_animation(i)
-    	}, 2300 );
+		reset_animation(i);
+    	}, 3000 );
 }
 
 div[1].addEventListener("mouseleave",function(){
