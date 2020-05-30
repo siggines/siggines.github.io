@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>  </title>
+		<style>
+			#container{
+				position:relative;
+				left:25%;
+				height:486px;
+				width:886px; /* Same as Window INCLUDING borders */
+			}
+			#window{
+				position:absolute;
+				height:480px;
+				width:880px;
+				border:solid;
+				background:linear-gradient(to top,#99ddff,#00aaff);
+			}
+			#ball{
+				position:absolute;
+				top:200;
+				left:200;
+			}
+			h2{
+				font-size:30pt;
+				position:relative;
+				top:0;
+				padding:1px;
+				margin:10px;
+				max-width:100px;
+			}
+			h1{
+				font-family:monospace;
+				display:block;
+				position:relative;
+				top:0;
+				left:50%;
+				padding:1px;
+				margin:20px;
+			}
+			p{
+				font-family:monospace;
+				display:block;
+				padding:1px;
+				margin:20px;
+			}
+			#text{
+				position:relative;
+				top:5px;
+				left:25%;
+				width:350px;
+				height:400px;
+				padding:0;
+				margin:0;
+			}
+			#controls{
+				font-size:22pt;
+				position:absolute;
+				top:555px;
+				left:50%;
+				width:350px;
+				height:400px;
+				padding:0;
+				margin:0;
+			}
+			html::-webkit-scrollbar{
+				display:none;
+			}
+		</style>
+	</head>
+	<body onload="start()" onkeyup="input_event(event)" >
+		<div id="container">
+		<span id="window" onclick="set_position(event)" >
+			<img id="ball" src="./pix/ball.gif" height="80" width="80" >
+		</span>
+		</div>
+			<div id="text">
+				<h2> Controls: </h2>
+				<h1> Pause </h1>
+				<h1> Reverse </h1>
+				<h1> Accelerate </h1>
+				<h1> Declerate </h1>
+				<h1> Heavier </h1>
+				<h1> Lighter </h1>
+			</div>
+			<div id="controls">
+				<p> Space </p>
+				<p> R </p>
+				<p> A </p>
+				<p> D </p>
+				<p> H </p>
+				<p> L </p>
+			</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
