@@ -1,11 +1,11 @@
 var animation,key;
 var Xpos=200, Ypos=200;
-var Xvel=10, Yvel=4;
+var Xvel=5, Yvel=2.5;
 var paused=false;
 var pos = 0;
 
 function start(){
-	animation=window.setInterval("move()",2);
+	animation=window.setInterval("move()",1);
 }
 
 function move(){
@@ -30,6 +30,12 @@ function set_position(e){
 		Ypos=390;
 	if( Ypos<=0 )
 		Ypos=0;
+	/*
+	if( Yvel < 3)
+		Yvel=-.5;
+	if( Yvel < -1)
+		Yvel=-3;
+		*/
 	// console.log( Xpos,Ypos );
 }
 
@@ -51,28 +57,42 @@ function input_event(e){
 	// Accelerate
 	if(key== "A" ){
 		if( Xvel > 0)
-			Xvel=20;
+			Xvel*=1.2;
 		if( Xvel < 0)
-			Xvel=-20;
+			Xvel*=-1.2;
 		if( Yvel > 0)
-			Xvel=8;
+			Xvel*=1.2;
 		if( Yvel < 0)
-			Xvel=-8;
+			Xvel*=-1.2;
 	}
 	// Decelerate
 	if(key== "D" ){
-		Xvel/=2;Yvel/=2;
+		Xvel/=1.2;Yvel/=1.2;
 	}
 	// Decrease-mass
 	if(key== "L" ){
-		if( Yvel > 0 )
-			Yvel*=2;
-		if( Yvel < 0 )
-			Yvel*=-2;
+		if( Xvel > 0)
+			Xvel*=1.2;
+		if( Xvel < 0)
+			Xvel*=-1.2;
+		if( Yvel > 0)
+			Xvel*=1.4;
+		if( Yvel < 0)
+			Xvel*=-1.4;
 	}
 	// Increase-mass
 	if(key== "H" ){
-		Yvel/=2;
+		if( Xvel > 0)
+			Xvel/=1.2;
+		if( Xvel < 0)
+			Xvel/=-1.2;
+		if( Yvel > 0)
+			Xvel/=1.4;
+		if( Yvel < 0)
+			Xvel/=-1.4;
+	}
+	else if(key== "P"){
+		console.log(key)
 	}
 	// console.log(key);
 }
