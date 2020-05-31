@@ -21,7 +21,7 @@ function move(){
 }
 
 function set_position(e){
-	Xpos=e.clientX; Ypos=e.clientY;
+	Xpos=e.clientX-500; Ypos=e.clientY-50;
 	if( Xpos>=800 )
 		Xpos=790;
 	if( Xpos<=0 )
@@ -30,13 +30,7 @@ function set_position(e){
 		Ypos=390;
 	if( Ypos<=0 )
 		Ypos=0;
-	/*
-	if( Yvel < 3)
-		Yvel=-.5;
-	if( Yvel < -1)
-		Yvel=-3;
-		*/
-	// console.log( Xpos,Ypos );
+	console.log( Xpos,Ypos );
 }
 
 function input_event(e){
