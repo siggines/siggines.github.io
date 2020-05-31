@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<title></title>
+	<title>Drag+Drop JavaScript</title>
 	<style>
 		img {
 			width: 20%;
 			height: 20%;
+			top:5px;
 		}
 		#box {
 			border: 3px solid black;
 			height: 30vh;
 			width: 30vh;
 			position: absolute;
-			top: 350px;
+			top: 450px;
 			left: 300px;
-			font-size: 30pt;	
+			font-size: 30pt;
 		}
-		#blyat {
-			position: absolute;
-			top: 220px;
+		#response{
+			position: relative;
+			top: 740px;
 			left: 300px;
 		}
 		#task{
-			position: absolute;
-			top: 220px;
+			position: relative;
+			top: 740px;
 			left: 60px;
 		}
 	</style>
 	<script>
-	function allowDrop(ev){  
+	function allowDrop(ev){
 		ev.preventDefault();
 	}
 	var data;
 	function drag(ev){
 		ev.dataTransfer.setData("src", ev.target.id);
-		data = ev.target.id; 
+		data = ev.target.id;
 		console.log(data);
 	}
 	function drop(ev){
@@ -45,25 +45,23 @@
 		var goal = document.getElementById("task");
 		goal.innerHTML = "";
 
-		var result = document.getElementById("blyat");		
-        
+		var result = document.getElementById("response");
+
 		if(data=="meow"){
-			console.log("yeet");
 			result.innerHTML = "correct";
 			result.style.color = 'green';
 		}
 		else{
-			console.log("neet")
 			result.innerHTML = "incorrect";
 			result.style.color = 'red';
 		}
 	}
 	</script>
 </head>
-  
+
 <body>
-	<h1 id="task">Quick, drag the cat into the box!</h1>
-	<h1 id="blyat"></h1>
+	<h1 id="task">Drag the cat into the box.</h1>
+	<h1 id="response"></h1>
 	<div id="box" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
 	<img class="cat" id="meow" draggable="true" ondragstart="drag(event)" src="./cat.png"></img>
 	<img class="dog1" draggable="true" ondragstart="drag(event)" src="./dog1.jpg"></img>
