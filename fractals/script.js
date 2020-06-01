@@ -7,10 +7,7 @@ var ctx = canvas.getContext("2d");
 function check(x,y){ //returns true or false
 	var X = x; var Y = y;
 
-	var Xsqr = X*X; var Ysqr = Y*Y; // Squared
-	var XX = X*2;	// Doubled
-
-	for( var i = 0; i < 10; ++i ){
+	for( var i = 0; i < 3000; ++i ){
 		var Xn = X*X - Y*Y + x;
 		var Yn = 2* X * Y + y;
 		X=Xn; Y=Yn;
@@ -22,9 +19,9 @@ function check(x,y){ //returns true or false
 	return false;
 }
 
-function render(){
-	var mag = 100;
-	var Xpan = 0; var Ypan = 0;
+(function(){
+	var mag = 1000;
+	var Xpan = 1; var Ypan = 0;
 	for( var x = 0; x < canvas.width; ++x ){
 		for( var y = 0; y < canvas.height; ++y ){
 			var Xready = x/mag-Xpan;
@@ -36,3 +33,4 @@ function render(){
 		}
 	}
 }
+)();
