@@ -1,4 +1,6 @@
 var canvas = document.getElementById("canvas");
+canvas.width = "1000";
+canvas.height = "1000";
 document.body.appendChild(canvas);
 var ctx = canvas.getContext("2d");
 
@@ -24,12 +26,13 @@ function check(x,y){ //returns true or false
 
 function render(){
 	for( var x = 0; x < canvas.width; ++x ){
-		for( var y = 0; x < canvas.height; ++y ){
+		for( var y = 0; y < canvas.height; ++y ){
 			var Xready = x/mag-Xpan;
 			var Yready = y/mag-Ypan;
 			var CHECK = check(Xready,Yready);
-			if(check)
-				ctx.fillRect(x,y, 1,1);
+			if(CHECK){
+				ctx.fillRect(y,x, 1,1);
+			}
 		}
 	}
 }
