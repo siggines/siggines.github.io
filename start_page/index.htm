@@ -12,48 +12,64 @@
 
 			<h1 id="clock"></h1>
 
-			<form id="search" method="get" action="https://www.qwant.com/?q=">
+			<form id="search" method="get" action="https://www.duckduckgo.com/?q=">
 				<input type="text" name="q" autocomplete="off" size="15" value="">
 			</form>
 
-			<div class="child" >
-				<h3 class="title" >Youtube</h3>
-				<a href="http://youtube.com/user/PowerfulJRE/videos">jre</a><br>
-				<a href="https://www.youtube.com/user/AnimusGameHD/videos">Blume</a><br>
-				<a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q/playlists">DevEd</a><br>
-				<form id="youtube" method="get" action="https://www.youtube.com/results?search_query=">
-					<input type="text" autocomplete="off" spellcheck="false" name="q" size="10" value="">
-				</form>
-			</div>
+			<form id="chan" action="javascript:attach()" >
+				<input id="board" type="text" spellcheck="false" autocomplete="off" size="5" onkeydown="enter(this)" >
+			</form>
 
-			<div class="child" >
-				<h3 class="title" >Education</h3>
-				<a href="https://www.w3schools.com/">W3_Schools</a><br>
-				<a href="https://www.bitdegree.org/learn/javascript-call-function">Bitdegree</a><br>
-				<a href="https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/">CSS</a><br>
-			</div>
+				<div class="child" >
+					<h3 class="title" > Resource </h3>
+					<a href="https://www.w3schools.com/">W3_Schools</a><br>
+					<a href="https://www.bitdegree.org/learn/">Bitdegree</a><br>
+					<a href="https://www.w3schools.com/colors/colors_picker.asp"> Colour picker (hex) </a><br>
+					<a href="https://css-tricks.com/"> CSS tricks </a><br>
+					<!--	<a href="https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/">CSS</a><br>	-->
+					<!--	<a href="https://reactjs.org/tutorial/tutorial.html"> React Tutor </a><br>
+	     <a href="https://reactjs.org/docs/introducing-jsx.html"> React Documentation </a><br>
+	     <a href="https://reactjs.org/community/courses.html"> React Courses </a><br>	-->
+				</div>
 
-			<div class="child" >
-				<h3 class="title" >Msg</h3>
-				<a href="https://mail.tutanota.com/login">Tuta</a><br>
-				<a href="http://mail.protonmail.com/login">Proton</a><br>
-				<a href="https://www.messenger.com/t/100004646764798">Messenger</a><br>
-			</div>
+				<div class="child" >
+					<h3 class="title" > utube & stuff </h3>
+					<a href="https://www.youtube.com/user/AnimusGameHD/videos">Blume</a><br>
+					<a href="https://www.youtube.com/watch?v=4KzFe50RQkQ&t=14041s">Wind</a><br>
+					<form id="youtube" method="get" action="https://www.youtube.com/results?search_query=">
+						<input type="text" autocomplete="off" spellcheck="false" name="q" size="10" value="">
+					</form>
+				</div>
 
-			<div class="child" >
-				<h3 class="title">Useful1</h3>
-				<a href="https://github.com/siggines?tab=repositories&q=&type=public&language=">GitHub</a><br>
-				<a href="https://siggines.github.io/">Git-page</a><br>
-				<a href="https://wiki.archlinux.org/">Arch_wiki</a> <br>
-			</div>
+				<div class="child" >
+					<h3 class="title" > Msgs </h3>
+					<a href="https://mail.tutanota.com/login">Tuta</a><br>
+					<a href="http://mail.protonmail.com/login">Proton</a><br>
+					<a href="https://www.messenger.com/t/100004646764798">Messenger</a><br>
+				</div>
 
-			<div class="child" >
-				<h3 class="title">Useful2</h3>
-				<a href="https://www.windy.com/?53.127,2.106,5">Windy_ty</a><br>
-				<a href="http://wikipedia.org/wiki/Main_Page">Wikipedia</a><br>
-				<a href="https://translate.google.com/#view=home&op=translate&sl=la&tl=en">Translate</a><br>
-			</div>
+				<div class="child" >
+					<h3 class="title"> Assorted useful </h3>
+					<a href="https://www.windy.com/?53.127,2.106,5">Windy_ty</a><br>
+					<a href="http://wikipedia.org/wiki/Main_Page">Wikipedia</a><br>
+					<a href="http://en.citizendium.org/wiki/">Citizendium</a><br>
+					<a href="https://wiki.archlinux.org/">Arch_wiki</a><br>
+					<a href="https://translate.google.com/#view=home&op=translate&sl=la&tl=en">Translate</a><br>
+					<a href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/">rspb</a><br>
+				</div>
 
+				<div class="child" >
+					<h3 class="title"> Git </h3>
+					<a href="https://github.com/siggines?tab=repositories&q=&type=public&language=">GitHub</a><br>
+					<a href="https://siggines.github.io/">Git-page</a><br>
+					<a href="https://bitbucket.org/grue7/">BitBucket</a><br>
+					<a href="https://grue7.bitbucket.io">BitBucket-page</a><br>
+				</div>
+
+				<div class="child" >
+					<h3 class="title"> Misc </h3>
+					<a href="file:///home/jacob/code/sites/start_page/index.htm">Scratch-board</a><br>
+				</div>
 		</div>
 
 		<script src="app.js"></script>

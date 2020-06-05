@@ -1,8 +1,25 @@
+var chan = document.getElementById("chan");
+var board = "";
+
+function enter(input){
+	if(event.key === 'Enter'){
+		board = input.value;
+	}
+}
+
+function attach(){
+	var together = "https://boards.4channel.org/"+board+"/catalog";
+	window.location = together;
+	board.value="";
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////
 // Box title fadeback on mouse leave animations, canceled when mosue moves back in
 // "mouseout" would be applicable if I wanted the (div) element's 'children' included
 // I use reset_animation to allow animation to happen multiple times and also
 // 	to 'cancel' the animation if you were to move mouse out and back in of box
+// I have also had to set the title display to none when links are visible otherwise
+//	the element takes up space and makes the top link(s) partially unclickable
 ///////////////////////////////////////////////////////////////////////////////////////
 
 var div = document.querySelectorAll("div");
