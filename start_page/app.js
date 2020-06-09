@@ -12,76 +12,32 @@ function attach(){
 	window.location = together;
 	board.value="";
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////////////////////////////////////////////////////////////////
-// Box title fadeback on mouse leave animations, canceled when mosue moves back in
-// "mouseout" would be applicable if I wanted the (div) element's 'children' included
-// I use reset_animation to allow animation to happen multiple times and also
-// 	to 'cancel' the animation if you were to move mouse out and back in of box
-///////////////////////////////////////////////////////////////////////////////////////
-
-var div = document.querySelectorAll("div");
-var title = document.getElementsByClassName("title");
-//var len = div.length;
+var elements = document.getElementsByClassName("child");
+var titles = document.getElementsByClassName("title");
 
 function reset_animation(i) {
-	title[i].style.animation = "none";
-	title[i].style.animation = null;
+	titles[i].style.animation = "none";
+	titles[i].style.animation = null;
 }
 
 function fade_back(i){
-	title[i].style.display = "block";
-	title[i].style.animation = "fade 3s linear";
+	titles[i].style.display = "block";
+	titles[i].style.animation = "fade 3s linear";
 	setTimeout(function() {
 		reset_animation(i);
-    	}, 3000 );
+	}, 3000 );
 }
 
-div[2].addEventListener("mouseleave",function(){
-	fade_back(0);
-});
-div[2].addEventListener("mouseover",function(){
-	reset_animation(0);
-});
+for (let i = 0; i < elements.length; i++) {
+	const el = elements[i];
 
-div[3].addEventListener("mouseleave",function(){
-	fade_back(1);
-});
-div[3].addEventListener("mouseover",function(){
-	reset_animation(1);
-});
+	el.addEventListener('mouseover', () => {
+		reset_animation(i);
+	})
 
-div[4].addEventListener("mouseleave",function(){
-	fade_back(2);
-});
-div[4].addEventListener("mouseover",function(){
-	reset_animation(2);
-});
-
-div[5].addEventListener("mouseleave",function(){
-	fade_back(3);
-});
-div[5].addEventListener("mouseover",function(){
-	reset_animation(3);
-});
-
-div[6].addEventListener("mouseleave",function(){
-	fade_back(4);
-});
-div[6].addEventListener("mouseover",function(){
-	reset_animation(4);
-});
-
-div[7].addEventListener("mouseleave",function(){
-	fade_back(5);
-});
-div[7].addEventListener("mouseover",function(){
-	reset_animation(5);
-});
-
-div[8].addEventListener("mouseleave",function(){
-	fade_back(6);
-});
-div[8].addEventListener("mouseover",function(){
-	reset_animation(6);
-});
+	el.addEventListener('mouseleave', () => {
+		fade_back(i);
+	});
+}
