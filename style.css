@@ -177,3 +177,7 @@ h2 {
 #mail1{
     font-size:18pt;
 }
+
+#number{
+	color:var(--color1);
+}
