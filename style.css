@@ -6,8 +6,8 @@
 	--color5: #ebdbb2; /* Skin ( for text ) */
 	--color6: #1d2021; /* Near black ( for body ) */
 
-	--colorA: #83a598; /* Very pale blue ( background 1 ) */
-	--colorB: #458588; /* Pale blue ( background 2 ) */
+	--colorA: #000000; /* Very pale blue ( background 1 ) */
+	--colorB: #071A30; /* Pale blue ( background 2 ) */
 	--colorC: #9894FC; /* Ice blue ( background 3 ) */
 }
 html{
