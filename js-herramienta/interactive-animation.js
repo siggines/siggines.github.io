@@ -1,3 +1,5 @@
+## /* This is a feature to get to specific url pages such as youtube channels */
+
 var chan = document.getElementById("chan");
 var board = "";
 
@@ -8,11 +10,12 @@ function enter(input){
 }
 
 function attach(){
-	var together = "https://boards.4channel.org/"+board+"/catalog";
+	var together = ""+board+"";
 	window.location = together;
 	board.value="";
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+## /* This is an interactive animation which triggers the anim on mouse enter and mouse leave */
 
 var elements = document.getElementsByClassName("child");
 var titles = document.getElementsByClassName("title");
