@@ -3,6 +3,11 @@
 	font-size:14px;
 	background:lightgrey;
 }
+
+body{
+	scrollbar-color: black white;
+}
+
 #title{
 	font-size:30px;
 	text-align:center;
