@@ -8,7 +8,6 @@ function COPY(specify){
 		copied = document.getElementById("copied1");
 		copied.classList.add("fader");
 	}
-
 	else if( specify == 2 ){
 		range.selectNode(document.getElementById("mail2"));
 		copied = document.getElementById("copied2");
